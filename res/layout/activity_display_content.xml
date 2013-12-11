@@ -1,0 +1,109 @@
+<!-- The main content view -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00ACEE"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".WeatherPopDisplayActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="fill_vertical"
+        android:layout_weight="1.13"
+        android:background="#00ACEE"
+        android:fitsSystemWindows="true"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity" >
+
+        <TextView
+            android:id="@+id/cityText"
+            style="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/temp"
+            style="@style/tempStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cityText"
+            android:layout_centerHorizontal="true" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/unittemp"
+            style="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/temp"
+            android:layout_below="@id/cityText"
+            android:layout_toRightOf="@id/temp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/condDescr"
+            style="@style/valData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temp"
+            android:layout_centerHorizontal="true" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/hum"
+            style="@style/infoOverlayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/temp"
+            android:layout_below="@id/condDescr" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/press"
+            style="@style/infoOverlayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/temp"
+            android:layout_below="@id/hum" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/windSpeed"
+            style="@style/infoOverlayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/temp"
+            android:layout_below="@id/press" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/windDeg"
+            style="@style/infoOverlayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/temp"
+            android:layout_below="@id/windSpeed" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/condIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/temp"
+            android:layout_toRightOf="@id/temp"
+            android:contentDescription="@string/condition_icon" />
+    </RelativeLayout>
+
+</LinearLayout>
