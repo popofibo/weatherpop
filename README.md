@@ -4,7 +4,7 @@ WeatherPop
 Android weather application - http://popofibo.com/pop/another-android-weather-application/
 
 LICENSE SUMMARY
-===============
+---------------
 
 Android Weather Application
 Copyright (C) 2013 PopoFibo
